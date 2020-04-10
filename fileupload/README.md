@@ -6,8 +6,8 @@ Additional nodes you need to install
 - node-red-dashboard
 
 ## Dashboard
-![Dashboard](dashboard.jpeg)
+![Dashboard](pictures/dashboard.jpeg)
 
 ## Flow
 Copy and import the [flow](https://github.com/aintegration/flows/blob/master/fileupload/flow.json) to your Node-Red
-![Flow](flow.jpeg)
+![Flow](pictures/flow.jpeg)
