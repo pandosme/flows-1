@@ -23,6 +23,7 @@ Copy and import the [flow](https://github.com/aintegration/flows/blob/master/fil
 
 ## User extensions
 You can easily add your own object behaviour filters by adding a function block between the MQTT subscription and Dashboard display.
+The [Tracker ACAP](https://github.com/pandosme/acaps/tree/master/tracker) documentation describes all properties that can be used for filters.
 
 Example javascript code that only displays objects moving down:
 ```
