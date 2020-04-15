@@ -15,8 +15,8 @@ Bounding boxes will appear on the static image.  As there is no video the data i
 - Red box shows where the object was lost
 
 You can refresh both the image and flush all bounding boxes.
-![Dashboard](pictures/dashboard.jpeg)
+![Dashboard](pictures/dashboard.PNG)
 
 ## Flow
 Copy and import the [flow](https://github.com/aintegration/flows/blob/master/fileupload/flow.json) to your Node-Red
-![Flow](pictures/flow.jpeg)
+![Flow](pictures/flow.PNG)
