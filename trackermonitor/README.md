@@ -2,10 +2,12 @@
 The [Tracker ACAP](https://github.com/pandosme/acaps/tree/master/tracker) publish motion trackers on MQTT.  This flow demonstrates how to visualize these on a dashboard.
 
 
-## Required Nodes
-Additional nodes you need to install
-- node-red-dashboard
-- node-red-contrib-axis-camera
+## Requirements
+1. Axis Camera with FW 8.xx or later
+2. MQTT broker
+3. [Tracker ACAP](https://github.com/pandosme/acaps/tree/master/tracker) installed and configured
+4. node-red-dashboard installed on your Node-Red
+5. node-red-contrib-axis-camera installed on your Node-Red
 
 ## Dashboard
 Bounding boxes will appear on the static image.  As there is no video the data is completely anonymized.
