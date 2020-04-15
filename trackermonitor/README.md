@@ -20,7 +20,7 @@ You can refresh both the image and flush all bounding boxes.
 ![Dashboard](pictures/dashboard.PNG)
 
 ## Flow
-Copy and import the [flow](https://github.com/aintegration/flows/blob/master/fileupload/flow.json) to your Node-Red
+Copy and import the [flow](https://github.com/aintegration/flows/blob/master/trackermonitor/flow.json) to your Node-Red
 ![Flow](pictures/flow.PNG)
 
 ## User extensions
