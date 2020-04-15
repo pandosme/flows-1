@@ -3,7 +3,7 @@ The [Tracker ACAP](https://github.com/pandosme/acaps/tree/master/tracker) publis
 
 
 ## Requirements
-1. Axis Camera with FW 8.xx or later
+1. Axis Camera with FW 9.xx or later
 2. [Tracker ACAP](https://github.com/pandosme/acaps/tree/master/tracker) installed and configured on the camera
 3. MQTT broker
 4. node-red-dashboard installed on your Node-Red
