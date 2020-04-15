@@ -1,0 +1,1 @@
+[{"id":"60f0508a.7ae228","type":"Axis Camera","z":"6a1f4e39.83dff8","name":"","account":"28c7685f.ba4b98","address":"","action":"Image","data":"resolution=640x360&text=0","format":"base64","x":610,"y":120,"wires":[["2393619a.fecb36"]]},{"id":"28c7685f.ba4b98","type":"Camera Account","z":"","name":"root","protocol":"http"}]
