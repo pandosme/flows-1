@@ -1,5 +1,5 @@
 # Tracker Monitor
-The [Tracker ACAP](https://github.com/pandosme/acaps/tree/master/tracker) publish motion trackers on MQTT.  This flow demonstrates how to visualiza these on a dashboard.
+The [Tracker ACAP](https://github.com/pandosme/acaps/tree/master/tracker) publish motion trackers on MQTT.  This flow demonstrates how to visualize these on a dashboard.
 
 
 ## Required Nodes
@@ -20,3 +20,11 @@ You can refresh both the image and flush all bounding boxes.
 ## Flow
 Copy and import the [flow](https://github.com/aintegration/flows/blob/master/fileupload/flow.json) to your Node-Red
 ![Flow](pictures/flow.PNG)
+
+## User extensions
+You can easily add your own object behaviour filters by adding a function block between the MQTT subscription and Dashboard display.
+Example only showing objects moving down
+´´´
+if( msg.payload.dy > 0 )
+  return msg.payload
+´´´
