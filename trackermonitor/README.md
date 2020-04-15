@@ -23,8 +23,8 @@ Copy and import the [flow](https://github.com/aintegration/flows/blob/master/fil
 
 ## User extensions
 You can easily add your own object behaviour filters by adding a function block between the MQTT subscription and Dashboard display.
-Example only showing objects moving down
-´´´
+Example that only displays objects moving down
+```
 if( msg.payload.dy > 0 )
   return msg.payload
-´´´
+```
