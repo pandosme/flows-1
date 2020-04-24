@@ -15,5 +15,5 @@ You also need to st the camera address and possibly adjust the resolution.
 ![Dashboard](pictures/dashboard.PNG)
 
 ## Flow
-Copy and import the [flow](https://github.com/aintegration/flows/blob/master/tensor_flow_object_detection/flow.json) to your Node-Red
+Copy and import the [flow](https://github.com/aintegration/flows/blob/master/tensorflow_object_detection/flow.json) to your Node-Red
 ![Flow](pictures/flow.PNG)
