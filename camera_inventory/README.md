@@ -9,7 +9,7 @@ This flow is suitable when you need to have a camera inventory in your Node-Red.
 ```
 
 # Camera Discovery
-The Axis Discovery node will find cameras on the local network segment using UPnP and/or Bonjour.  THe discovery will not work if you are running Node-Red in a Docker Container.
+The Axis Discovery node will find cameras on the local network segment using UPnP and/or Bonjour.  Note that discovery will not work if you are running Node-Red in a Docker Container.
 
 # Usage
 Use the dashboard to add cameras to inventory.
@@ -28,7 +28,7 @@ cameras = global.get("cameras");
 if(!cameras)
   return;  //No inventory
 for(var serial in cameras)
- list.push(cameras[serial]
+ list.push(cameras[serial])
 ```
 For-Each-Camera, put the following in a function node
 ```
