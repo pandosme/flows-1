@@ -46,6 +46,8 @@ Before importing the flow you need to import the following nodes (Menue | Manage
 - node-red-contrib-axis-camera
 - node-red-contrib-axis-discovery
 
+Before deploying the flow you need to set the camera credentials in the Axis Camera node.  Double click the yellow node and set your camera credentials.
+
 ## Dashboard
 ![Dashboard](pictures/dashboard.PNG)
 
