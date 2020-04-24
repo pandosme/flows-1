@@ -1,4 +1,4 @@
-# TensorFlow Object CLassification 
+# TensorFlow Object Detection/Classifications 
 It is fun to play with object classifications in images.  This flow takes a picture from a camera (triggered by a dashbaord button) and sends it to a TensorFlow node and display the result on a dashboard (see below).
 You can easily replace the the dashboard button with your own troggers.  How many images/s you TensorFlow can analyze depends on the HW you are running on.
 
