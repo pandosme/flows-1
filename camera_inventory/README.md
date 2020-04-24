@@ -8,7 +8,10 @@ This flow is suitable when you need to have a camera inventory in your Node-Red.
     },
 ```
 
-# Usgae
+# Camera Discovery
+The Axis Discovery node will find cameras on the local network segment using UPnP and/or Bonjour.  THe discovery will not work if you are running Node-Red in a Docker Container.
+
+# Usage
 Use the dashboard to add cameras to inventory.
 
 When you want to use a camera in e.g. a function node, add the followng
@@ -18,7 +21,7 @@ if(!cameras)
   return;  //No inventory
 camera = cameras["THE CAMERA SERIAL IS"]
 ```
-If you need to JS array of cameras
+If you need an array of cameras
 ```
 list = [];
 cameras = global.get("cameras");
@@ -38,14 +41,14 @@ for(var serial in cameras)
 ```
 
 ## Prerequisites
-Before importing the flow you need to the following nodes (Menue | Manage pallette | Install)
+Before importing the flow you need to import the following nodes (Menue | Manage pallette | Install)
 - node-red-dashboard
 - node-red-contrib-axis-camera
 - node-red-contrib-axis-discovery
 
 ## Dashboard
-![Dashboard](pictures/dashboard.jpeg)
+![Dashboard](pictures/dashboard.PNG)
 
 ## Flow
 Copy and import the [flow](https://github.com/aintegration/flows/blob/master/camera_inventory/flow.json) to your Node-Red
-![Flow](pictures/flow.jpeg)
+![Flow](pictures/flow.PNG)
