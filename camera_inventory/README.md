@@ -23,12 +23,14 @@ camera = cameras["THE CAMERA SERIAL IS"]
 ```
 If you need an array of cameras
 ```
-list = [];
+var msg.payload = [];
 cameras = global.get("cameras");
-if(!cameras)
-  return;  //No inventory
+if(!cameras)  //No inventory
+  return msg;
+ 
 for(var serial in cameras)
- list.push(cameras[serial])
+ msg.payload.push(cameras[serial])
+return msg;
 ```
 For-Each-Camera, put the following in a function node
 ```
