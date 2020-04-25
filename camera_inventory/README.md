@@ -19,7 +19,7 @@ When you want to use a camera in e.g. a function node, add the followng
 cameras = global.get("cameras");
 if(!cameras)
   return;  //No inventory
-camera = cameras["THE CAMERA SERIAL IS"]
+camera = cameras["THE CAMERA SERIAL"]
 ```
 If you need an array of cameras
 ```
