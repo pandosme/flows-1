@@ -1,5 +1,21 @@
 # Camera Inventory
-This flow is suitable when you need to have a camera inventory in your Node-Red.  The inventory is stored in global context.  If you enable persistant storage the inventory will reamin intact event after restarting Node-Red.  To enable persistant storage you need to edit the file ./node-red/settings.js.  Remove the comments (//) on each line of the following section in settings.js.  You need to restart Node-Red after changes.
+
+When working with many cameras you need an inventory.  This flow allows you to use a dashboard to populate an inventory that is stored in the global context store.
+If you add a lot of cameras it is recommeded to also import the flow [device_discovery](https://github.com/aintegration/flows/tree/master/device_discovery)
+
+## Dashboard
+![Dashboard](pictures/dashboard.PNG)
+
+## Prerequisites
+
+Before importing the flow you need to import the following nodes (Menu | Manage pallette | Install)
+- node-red-dashboard
+- node-red-contrib-axis-camera
+
+You need to set the device credentials in the Axis Device Node before heading to the dashbaord.
+
+You should enable persistant storage in Node-Red in order for your inventory to survice a reboot.
+Open the file .node-red/settings.js in an editor and remove the comments (//) on each line of the following section in the file.
 ```
     contextStorage: {
         default: {
@@ -7,19 +23,25 @@ This flow is suitable when you need to have a camera inventory in your Node-Red.
         },
     },
 ```
+You need to restart Node-Red after changes.
 
-# Camera Discovery
-The Axis Discovery node will find cameras on the local network segment using UPnP and/or Bonjour.  Note that discovery will not work if you are running Node-Red in a Docker Container.
+## Flow
+Copy and import the [flow](https://github.com/aintegration/flows/blob/master/camera_inventory/flow.json) to your Node-Red
+
+Once imported you will see.
+![Flow](pictures/flow.PNG)
 
 # Usage
 Use the dashboard to add cameras to inventory.
+
+The inventory is stored in global context and accessed with `cameras = global.get("cameras")`.
 
 When you want to use a camera in e.g. a function node, add the followng
 ```
 cameras = global.get("cameras");
 if(!cameras)
   return;  //No inventory
-camera = cameras["THE CAMERA SERIAL IS"]
+camera = cameras["THE CAMERA SERIAL NUMBER"]
 ```
 If you need an array of cameras
 ```
@@ -39,18 +61,3 @@ for(var serial in cameras)
  node.send({payload:cameras[serial]})
 //DO NOT return msg;
 ```
-
-## Prerequisites
-Before importing the flow you need to import the following nodes (Menue | Manage pallette | Install)
-- node-red-dashboard
-- node-red-contrib-axis-camera
-- node-red-contrib-axis-discovery
-
-Before deploying the flow you need to set the camera credentials in the Axis Camera node.  Double click the yellow node and set your camera credentials.
-
-## Dashboard
-![Dashboard](pictures/dashboard.PNG)
-
-## Flow
-Copy and import the [flow](https://github.com/aintegration/flows/blob/master/camera_inventory/flow.json) to your Node-Red
-![Flow](pictures/flow.PNG)
