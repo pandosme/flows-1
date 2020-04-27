@@ -13,6 +13,8 @@ Before importing the flow you need to import the following nodes (Menu | Manage 
 - node-red-contrib-axis-camera
 - node-red-contrib-axis-discovery
 
+**Note that discovery will not work if Node-Red runs in a Docker container**
+
 The inventory is stored in global context (global.get("cameras").  You should enable persistant storage in Node-Red in order for your inventory to survice a rbeoot.
 Open the file .node-red/settings.js in an editor and remove the comments (//) on each line of the following section in the file.
 
