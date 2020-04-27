@@ -9,7 +9,7 @@ Before importing the flow you need to import the following nodes (Menue | Manage
 - node-red-contrib-tfjs-coco-ssd
 
 Before deploying the flow you need to set the camera credentials in the Axis Camera node. Double click the yellow node and set your camera credentials.
-You also need to st the camera address and possibly adjust the resolution.
+You also need to set the camera address and possibly adjust the resolution.
 
 ## Dashboard
 ![Dashboard](pictures/dashboard.PNG)
